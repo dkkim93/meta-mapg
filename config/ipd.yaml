@@ -1,0 +1,17 @@
+#################################################################################
+# ALGORITHM
+#################################################################################
+# Discount factor in reinforcement learning
+discount: 0.96  
+
+# Markov chain terminates when chain horizon is reached
+chain_horizon: 7
+
+#################################################################################
+# ENV
+#################################################################################
+# OpenAI gym environment name
+env_name: "IPD-v0"  
+
+# Episode terminates when horizon is reached
+ep_horizon: 150
