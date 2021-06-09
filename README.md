@@ -34,3 +34,17 @@ Additionally, to see the tensorboard logging during training:
 ```
 tensorboard --logdir=logs
 ```
+
+## Todo
+- [ ] Upload 2-Agent HalfCheetah code
+
+## Reference
+```
+@article{kim21metamapg,
+  author    = {Dong{-}Ki Kim and Miao Liu and Matthew Riemer and Chuangchuang Sun and Marwa Abdulhai and Golnaz Habibi and Sebastian Lopez{-}Cot and Gerald Tesauro and Jonathan P. How},
+  title     = {{A Policy Gradient Algorithm for Learning to Learn in Multiagent Reinforcement Learning}},
+  journal   = {International Conference on Machine Learning (ICML)},
+  year      = {2021},
+  url       = {http://arxiv.org/abs/2011.00382}
+}
+```
