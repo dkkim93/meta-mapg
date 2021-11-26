@@ -1,0 +1,38 @@
+#################################################################################
+# ALGORITHM
+#################################################################################
+# Discount factor in reinforcement learning
+discount: 0.95
+
+# Learning rate for actor (inner loop)
+actor_lr_inner: 0.005
+
+# Learning rate for actor (outer loop)
+actor_lr_outer: 0.00005
+
+# Learning rate for value (outer loop)
+value_lr: 0.000055
+
+# Entropy weight in the meta-optimization
+entropy_weight: 0
+
+# Markov chain terminates when chain horizon is reached
+chain_horizon: 2
+
+# Terminate program when max train iteration is reached
+max_train_iteration: 12500
+
+#################################################################################
+# ENV
+#################################################################################
+# OpenAI gym environment name
+env_name: "HalfCheetahDir-v0"
+
+# Episode terminates when horizon is reached
+ep_horizon: 200
+
+# Direction that half-cheetah robot should move to
+direction: 1
+
+# If True, scale reward for train stabilization
+reward_scale: True
