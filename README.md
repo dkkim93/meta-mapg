@@ -9,6 +9,7 @@ pip3.6
 virtualenv
 numpy>=1.14.0
 torch==1.4.0
+mujoco_py==2.1.2.14
 gym==0.12.5
 tensorboardX==1.2
 pyyaml==3.12
@@ -23,28 +24,44 @@ pip3.6 install --upgrade virtualenv
 Please note that all the required dependencies will be automatically installed in the virtual environment by running the training script (`_train.sh`).
 
 ## Run
-To start training in IPD:
+First, please change the config argument in `_train.sh`:
+```
+ipd.yaml (for IPD)
+rps.yaml (for RPS)
+half_cheetah_dir.yaml (for 2-Agent HalfCheetah)
+```
+
+Only for 2-Agent HalfCheetah experiment, it requires downloading meta-train, validation, and test models:
+```
+cd pretrain_model
+wget --no-check-certificate -r 'https://www.dropbox.com/s/f0506749ns88qq1/HalfCheetahDir-v0.zip?dl=0' -O tmp && unzip tmp && rm tmp
+```
+
+After changing the config argument, start training by:
 ```
 ./_train.sh
 ```
 
-To start training in RPS, please change the config argument from `ipd.yaml` to `rps.yaml` in `_train.sh`.
-
-Additionally, to see the tensorboard logging during training:
+Lastly, to see the tensorboard logging during training:
 ```
 tensorboard --logdir=logs
 ```
 
-## Todo
-- [ ] Upload 2-Agent HalfCheetah code
 
 ## Reference
 ```
-@article{kim21metamapg,
-  author    = {Dong{-}Ki Kim and Miao Liu and Matthew Riemer and Chuangchuang Sun and Marwa Abdulhai and Golnaz Habibi and Sebastian Lopez{-}Cot and Gerald Tesauro and Jonathan P. How},
+@inproceedings{kim21metamapg,
   title     = {A Policy Gradient Algorithm for Learning to Learn in Multiagent Reinforcement Learning},
-  journal   = {International Conference on Machine Learning (ICML)},
+  author    = {Kim, Dong Ki and Liu, Miao and Riemer, Matthew D and Sun, Chuangchuang and Abdulhai, Marwa and Habibi, Golnaz and Lopez-Cot, Sebastian and Tesauro, Gerald and How, Jonathan},
+  booktitle = {Proceedings of the 38th International Conference on Machine Learning},
+  pages     = {5541--5550},
   year      = {2021},
-  url       = {http://arxiv.org/abs/2011.00382}
+  editor    = {Meila, Marina and Zhang, Tong},
+  volume    = {139},
+  series    = {Proceedings of Machine Learning Research},
+  month     = {18--24 Jul},
+  publisher = {PMLR},
+  pdf       = {http://proceedings.mlr.press/v139/kim21g/kim21g.pdf},
+  url       = {https://proceedings.mlr.press/v139/kim21g.html},
 }
 ```
