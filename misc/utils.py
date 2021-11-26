@@ -99,6 +99,9 @@ def log_performance(scores, log, tb_writer, args, i_joint, iteration, rank, is_t
         is_train (bool): Flag to identify whether in meta-train or not
     """
     for i_agent, score in enumerate(scores):
+        if args.reward_scale:
+            score *= args.ep_horizon * 100
+
         log[args.log_name].info(
             "[Rank::{}] At iteration {}, reward: {:.5f} for agent {} at joint policy {}".format(
                 rank, iteration, score, i_agent, i_joint))
