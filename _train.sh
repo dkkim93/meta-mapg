@@ -19,13 +19,13 @@ for SEED in {1..10}
 do
     python3 main.py \
     --seed $SEED \
-    --config "half_cheetah_dir.yaml" \
+    --config "ipd.yaml" \
     --opponent-shaping \
     --prefix ""
 
     python3 main.py \
     --seed $SEED \
-    --config "half_cheetah_dir.yaml" \
+    --config "ipd.yaml" \
     --opponent-shaping \
     --test-mode \
     --prefix "test"
