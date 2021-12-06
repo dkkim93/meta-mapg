@@ -15,3 +15,6 @@ env_name: "IPD-v0"
 
 # Episode terminates when horizon is reached
 ep_horizon: 150
+
+# If True, scale reward for train stabilization
+reward_scale: False

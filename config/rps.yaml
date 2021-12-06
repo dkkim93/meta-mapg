@@ -27,3 +27,6 @@ env_name: "RPS-v0"
 
 # Episode terminates when horizon is reached
 ep_horizon: 50
+
+# If True, scale reward for train stabilization
+reward_scale: False
