@@ -1,5 +1,5 @@
 # Meta-MAPG
-Source code for ["A Policy Gradient Algorithm for Learning to Learn in Multiagent Reinforcement Learning"](https://arxiv.org/pdf/2011.00382.pdf) (ICML-2021)
+Source code for ["A Policy Gradient Algorithm for Learning to Learn in Multiagent Reinforcement Learning"](https://arxiv.org/pdf/2011.00382.pdf) (ICML 2021)
 
 ## Dependency
 Known dependencies are (please also refer to `requirements.txt`):
